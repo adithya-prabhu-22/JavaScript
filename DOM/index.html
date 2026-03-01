@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .myClass {
+            color: red;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="myDiv"></div>
+    </div>
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+
+        myDiv.innerHTML = '<h1 class="myClass">Hello World</h1>';
+
+        myDiv.innerHTML += '<p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>';
+
+        myDiv.innerHTML += '<h2 class="myClass">Random Subtitle</h2>';
+
+        myDiv.innerHTML += '<p class="myClass">This is another random paragraph added dynamically using JavaScript.</p>';
+
+        myDiv.innerHTML += '<ul class="myClass"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>';
+    </script>
+</body>
+</html>
+
+
+
