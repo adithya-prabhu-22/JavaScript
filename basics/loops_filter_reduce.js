@@ -13,4 +13,4 @@ const cart = [
     { name: 'item3', price: 30 }
 ];  
 const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
-console.log(totalPrice); // 60
+console.log(totalPrice); 
