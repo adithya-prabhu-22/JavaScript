@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Propagation</title>
+    <style>
+        #parent {
+            padding: 40px;
+            background-color: lightblue;
+        }
+
+        #child {
+            padding: 40px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        Parent
+        <div id="child">
+            Child
+        </div>
+    </div>
+
+    <script>
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        // Parent bubbling
+        parent.addEventListener("click", function() {
+            console.log("Parent - Bubbling");
+        });
+
+        // Child bubbling with stopPropagation
+        child.addEventListener("click", function(event) {
+            console.log("Child - Bubbling");
+            event.stopPropagation();   // Stops event from going up
+        });
+
+        // Parent capturing
+        parent.addEventListener("click", function() {
+            console.log("Parent - Capturing");
+        }, true);
+
+        // Child capturing
+        child.addEventListener("click", function() {
+            console.log("Child - Capturing");
+        }, true);
+
+    </script>
+
+</body>
+</html>
