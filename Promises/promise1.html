@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div 
+        class="x" 
+        style="width: 200px; height: 200px; background-color: lightblue;"
+    >
+        <p>This is a paragraph inside the div.</p>
+    </div>
+
+    <script>
+        const promise1 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve("Promise resolved successfully!");
+            }, 2000);
+        });
+
+        promise1.then(function (message) {
+            alert(message);
+        });
+
+
+        promise1.catch(function (error) {
+            alert("Promise rejected: " + error);
+        });
+    </script>
+
+</body>
+</html>
