@@ -21,14 +21,15 @@
             }, 2000);
         });
 
-        promise1.then(function (message) {
-            alert(message);
-        });
-
-
-        promise1.catch(function (error) {
-            alert("Promise rejected: " + error);
-        });
+        async function asyncFunction() {
+            try {
+                const message = await promise1;
+                alert(message);
+            } catch (error) {
+                alert("Promise rejected: " + error);
+            }
+        }
+        asyncFunction();
     </script>
 
 </body>
